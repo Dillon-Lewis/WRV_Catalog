@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../models/board.dart';
 
 // ignore: must_be_immutable
@@ -12,17 +13,37 @@ class BoardsTile extends StatelessWidget {
       margin: EdgeInsets.only(left: 25),
       width: 250,
       decoration: BoxDecoration(
-        color: Colors.blueGrey,
-        borderRadius: BorderRadius.circular(12)
+        borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
         children: [
-          Image.asset(board.imagePath),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset(
+              board.frontImage, // Use frontImage from the Board model
+              width: 110,
+            ),
+          ),
+          SizedBox(height: 8), // Add some spacing between the image and text
+          
+          // Display the model name (in bold)
+          Text(
+            board.model,
+            style: GoogleFonts.marcellusSc(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          
+          // Display the shaper name (in regular style)
+          Text(
+            board.shaper,
+            style: GoogleFonts.marcellusSc(
+              fontSize: 20,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
         ],
-        // Board
-        
-
-        // Model name and shaper
       ),
     );
   }
