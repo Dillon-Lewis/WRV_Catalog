@@ -16,17 +16,17 @@ class BoardsTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Image.asset(
-              board.frontImage, // Use frontImage from the Board model
-              width: 110,
-            ),
+              board.frontImage, 
+              height: 300,
+                          ),
           ),
-          SizedBox(height: 8), // Add some spacing between the image and text
+          SizedBox(height: 8), 
           
-          // Display the model name (in bold)
           Text(
             board.model,
             style: GoogleFonts.marcellusSc(
@@ -39,7 +39,7 @@ class BoardsTile extends StatelessWidget {
           Text(
             board.shaper,
             style: GoogleFonts.marcellusSc(
-              fontSize: 20,
+              fontSize: 18,
               fontWeight: FontWeight.normal,
             ),
           ),

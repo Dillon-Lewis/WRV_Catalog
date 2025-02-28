@@ -3,6 +3,84 @@
       "model": "Vapor",
       "shaper": "Bob Yinger",
       "frontImage": "assets/images/Boards/Yinger-Vapor-Front.png",
-      "backImage": "assets/images/Boards/Yinger-Vapor-Back.png"
+      "backImage": "assets/images/Boards/Yinger-Vapor-Back.png",
+      "style": "Performance"
+    },
+    {
+      "model": "Wahoo",
+      "shaper": "Leo Ravina",
+      "frontImage": "assets/images/Boards/Ravina-Wahoo-Front.png",
+      "backImage": "assets/images/Boards/Ravina-Wahoo-Back.png",
+      "style": "Alternative"
+    },
+    {
+      "model": "Skipjack",
+      "shaper": "Bob Yinger",
+      "frontImage": "assets/images/Boards/Yinger-Skipjack-Front.png",
+      "backImage": "assets/images/Boards/Yinger-Skipjack-Back.png",
+      "style": "Alternative"
+    },
+    {
+      "model": "Mini Long",
+      "shaper": "Marty Keesecker",
+      "frontImage": "assets/images/Boards/Kee-Mini-Long-Front.png",
+      "backImage": "assets/images/Boards/Kee-Mini-Long-Back.png",
+      "style": "Longboard"
+    },
+    {
+      "model": "Fish",
+      "shaper": "Macoto",
+      "frontImage": "assets/images/Boards/MA-Fish-Front.png",
+      "backImage": "assets/images/Boards/MA-Fish-Back3.png",
+      "style": "Alternative"
+    },
+    {
+      "model": "MA Mid",
+      "shaper": "Macoto",
+      "frontImage": "assets/images/Boards/MA-Mid-Front.png",
+      "backImage": "assets/images/Boards/MA-Mid-Back.png",
+      "style": "Mid-Length"
+    },
+    {
+      "model": "Shuffleboard",
+      "shaper": "Leo Ravina",
+      "frontImage": "assets/images/Boards/Ravina-Shuffleboard-Front.png",
+      "backImage": "assets/images/Boards/Ravina-Shuffleboard-Back.png",
+      "style": "Longboard"
+    },
+    {
+      "model": "The '63",
+      "shaper": "Leo Ravina",
+      "frontImage": "assets/images/Boards/Ravina-The-63-Front.png",
+      "backImage": "assets/images/Boards/Ravina-The-63-Back.png",
+      "style": "Longboard"
+    },
+    {
+      "model": "Islander",
+      "shaper": "Leo Ravina",
+      "frontImage": "assets/images/Boards/Ravina-Islander-Front.png",
+      "backImage": "assets/images/Boards/Ravina-Islander-Back.png",
+      "style": "Mid-Length"
+    },
+    {
+      "model": "Duece",
+      "shaper": "Bob Yinger",
+      "frontImage": "assets/images/Boards/Yinger-Duece-Front.png",
+      "backImage": "assets/images/Boards/Yinger-Duece-Back.png",
+      "style": "Performance"
+    },
+    {
+      "model": "Elixir",
+      "shaper": "Bob Yinger",
+      "frontImage": "assets/images/Boards/Yinger-Elixir-Front.png",
+      "backImage": "assets/images/Boards/Yinger-Elixir-Back.png",
+      "style": "Performance"
+    },
+    {
+      "model": "Ripper",
+      "shaper": "Bob Yinger",
+      "frontImage": "assets/images/Boards/Yinger-Ripper-Front.png",
+      "backImage": "assets/images/Boards/Yinger-Ripper-Back.png",
+      "style": "Performance"
     }
 ]
