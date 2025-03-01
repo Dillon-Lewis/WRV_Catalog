@@ -7,6 +7,7 @@ class Board {
   final String frontImage;
   final String backImage;
   final String style;
+  final String details;
 
   // Constructor
   Board({
@@ -15,6 +16,7 @@ class Board {
     required this.frontImage,
     required this.backImage,
     required this.style,
+    required this.details,
   });
 
   // Factory method to create a Board from JSON
@@ -24,7 +26,8 @@ class Board {
       shaper: json['shaper'],
       frontImage: json['frontImage'],
       backImage: json['backImage'],
-      style: json['style']
+      style: json['style'],
+      details: json['details']
     );
   }
 
@@ -36,13 +39,14 @@ class Board {
       'frontImage': frontImage,
       'backImage': backImage,
       'style': style,
+      'details': details,
     };
   }
 
   // Override toString for debugging
   @override
   String toString() {
-    return 'Board(model: $model, shaper: $shaper, frontImage: $frontImage, backImage: $backImage, style: $style)';
+    return 'Board(model: $model, shaper: $shaper)';
   }
 }
 
