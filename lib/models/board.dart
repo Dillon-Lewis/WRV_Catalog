@@ -8,6 +8,11 @@ class Board {
   final String backImage;
   final String style;
   final String details;
+  final String finConfig;
+  final String stringer;
+  final String tail;
+  final String concave;
+  final String material;
 
   // Constructor
   Board({
@@ -17,6 +22,11 @@ class Board {
     required this.backImage,
     required this.style,
     required this.details,
+    required this.finConfig,
+    required this.stringer,
+    required this.tail,
+    required this.concave,
+    required this.material,
   });
 
   // Factory method to create a Board from JSON
@@ -27,7 +37,12 @@ class Board {
       frontImage: json['frontImage'],
       backImage: json['backImage'],
       style: json['style'],
-      details: json['details']
+      details: json['details'],
+      finConfig: json['finConfig'],
+      stringer: json['stringer'],
+      tail: json['tail'],
+      concave: json['concave'],
+      material: json['material'],
     );
   }
 
@@ -40,6 +55,11 @@ class Board {
       'backImage': backImage,
       'style': style,
       'details': details,
+      'finConfig': finConfig,
+      'stringer': stringer,
+      'tail': tail,
+      'concave': concave,
+      'material': material,
     };
   }
 

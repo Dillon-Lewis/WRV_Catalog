@@ -5,7 +5,12 @@
       "frontImage": "assets/images/Boards/Yinger-Vapor-Front.png",
       "backImage": "assets/images/Boards/Yinger-Vapor-Back.png",
       "style": "Performance",
-      "details": "The Vapor pairs a retro outline wiht a high performace bottom. Take it to the beach and surf all day. Whether it is 2 feet or the waves are firing, you won't be let down by the Vapor. Its volume lies mainly in its width, flatter deck, and fuller rails. The pulled in winged swallow tail, deep single to double concave, and unique rocker give this board its responsiveness and maneuverability."
+      "details": "The Vapor pairs a retro outline wiht a high performace bottom. Take it to the beach and surf all day. Whether it is 2 feet or the waves are firing, you won't be let down by the Vapor. Its volume lies mainly in its width, flatter deck, and fuller rails. The pulled in winged swallow tail, deep single to double concave, and unique rocker give this board its responsiveness and maneuverability.",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     },
     {
       "model": "Wahoo",
@@ -13,7 +18,12 @@
       "frontImage": "assets/images/Boards/Ravina-Wahoo-Front.png",
       "backImage": "assets/images/Boards/Ravina-Wahoo-Back.png",
       "style": "Alternative",
-      "details": "The Wahoo mixes a traditional fish outline with characteristics more commonly found in a modern high-performance shape. At the nose, the deck fades from a beveled rail down to the tail. Single to double concave to light vee on the bottom, and fairly full volume throughout sets the tone for smooth, fluid surfing."
+      "details": "The Wahoo mixes a traditional fish outline with characteristics more commonly found in a modern high-performance shape. At the nose, the deck fades from a beveled rail down to the tail. Single to double concave to light vee on the bottom, and fairly full volume throughout sets the tone for smooth, fluid surfing.",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     },
     {
       "model": "Skipjack",
@@ -21,7 +31,12 @@
       "frontImage": "assets/images/Boards/Yinger-Skipjack-Front.png",
       "backImage": "assets/images/Boards/Yinger-Skipjack-Back.png",
       "style": "Alternative",
-      "details": "The Skipjack is a modern twin with a wide diamond tail and plenty of foam throughout the nose for small wave surfing, A double concave with a vee give this twin the ability the turn on a dime, paired perfectly with a diamond tail resulting in a dreamey marraige of hold and maneuverability. Its fast, its nimble, and it'll get you through the flat spots while maintaining speed... Hold on to your britches!"
+      "details": "The Skipjack is a modern twin with a wide diamond tail and plenty of foam throughout the nose for small wave surfing, A double concave with a vee give this twin the ability the turn on a dime, paired perfectly with a diamond tail resulting in a dreamey marraige of hold and maneuverability. Its fast, its nimble, and it'll get you through the flat spots while maintaining speed... Hold on to your britches!",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
       
     },
     {
@@ -30,7 +45,12 @@
       "frontImage": "assets/images/Boards/Kee-Mini-Long-Front.png",
       "backImage": "assets/images/Boards/Kee-Mini-Long-Back.png",
       "style": "Longboard",
-      "details": "It's literally a minuature longboard. The Mini Long's advantage: the reduced weight and lighter frame yields better response and maximizes the action. Great for all experience levels. With sizes ranging from 7' to the mid 8's, you can't go wrong, with a Mini Long!"
+      "details": "It's literally a minuature longboard. The Mini Long's advantage: the reduced weight and lighter frame yields better response and maximizes the action. Great for all experience levels. With sizes ranging from 7' to the mid 8's, you can't go wrong, with a Mini Long!",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     },
     {
       "model": "MA Fish",
@@ -38,7 +58,12 @@
       "frontImage": "assets/images/Boards/MA-Fish-Front.png",
       "backImage": "assets/images/Boards/MA-Fish-Back3.png",
       "style": "Alternative",
-      "details": "The MA Fish is a classic fish, but carved through the eyes of a high performance craftsman. It's easy to ride and handles well, reglardless of wave quality and conditions. It takes off quickly, floating like a hovercraft uninterrupted lines and smooth turns. The MA Fish will keep you surfing in style without losing any performance along the way."
+      "details": "The MA Fish is a classic fish, but carved through the eyes of a high performance craftsman. It's easy to ride and handles well, reglardless of wave quality and conditions. It takes off quickly, floating like a hovercraft uninterrupted lines and smooth turns. The MA Fish will keep you surfing in style without losing any performance along the way.",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     },
     {
       "model": "MA Mid",
@@ -46,7 +71,12 @@
       "frontImage": "assets/images/Boards/MA-Mid-Front.png",
       "backImage": "assets/images/Boards/MA-Mid-Back.png",
       "style": "Mid-Length",
-      "details": "The MA Mid is a standard mid length made for cruising comfortably on waves all shapes and sizes. With a large beak nose and wide round tail, you can ride it freely and leisurely with a single fin, or add a little performance with a 2 + 1."
+      "details": "The MA Mid is a standard mid length made for cruising comfortably on waves all shapes and sizes. With a large beak nose and wide round tail, you can ride it freely and leisurely with a single fin, or add a little performance with a 2 + 1.",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     },
     {
       "model": "Shuffleboard",
@@ -54,7 +84,12 @@
       "frontImage": "assets/images/Boards/Ravina-Shuffleboard-Front.png",
       "backImage": "assets/images/Boards/Ravina-Shuffleboard-Back.png",
       "style": "Longboard",
-      "details": "The Shuffleboard is a contemporary styled longboard leaning more to high performance than classic, sporting a fair amount of rocker, a progressive bottom contour and hard 50/50 rails. Designed with the waves of the Outer Banks in mind, the shuffleboard will hold fast in steep sections but also maneuver at the crack of a whip, keeping you in the pocket for that perfect nose ride."
+      "details": "The Shuffleboard is a contemporary styled longboard leaning more to high performance than classic, sporting a fair amount of rocker, a progressive bottom contour and hard 50/50 rails. Designed with the waves of the Outer Banks in mind, the shuffleboard will hold fast in steep sections but also maneuver at the crack of a whip, keeping you in the pocket for that perfect nose ride.",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     },
     {
       "model": "The '63",
@@ -62,7 +97,12 @@
       "frontImage": "assets/images/Boards/Ravina-The-63-Front.png",
       "backImage": "assets/images/Boards/Ravina-The-63-Back.png",
       "style": "Longboard",
-      "details": "Inspired by the board building developments of 1963, this model features a classic early 60's outline, parallel rails, and slight hip in the rear. It's a great paddler and is geared towards summer small wave surfing. The '63 is an excellent, user-friendly nose rider with 50/50 rails and a full bellied bottom."
+      "details": "Inspired by the board building developments of 1963, this model features a classic early 60's outline, parallel rails, and slight hip in the rear. It's a great paddler and is geared towards summer small wave surfing. The '63 is an excellent, user-friendly nose rider with 50/50 rails and a full bellied bottom.",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     },
     {
       "model": "Islander",
@@ -70,7 +110,12 @@
       "frontImage": "assets/images/Boards/Ravina-Islander-Front.png",
       "backImage": "assets/images/Boards/Ravina-Islander-Back.png",
       "style": "Mid-Length",
-      "details": "The Islander is a smooth flowing mid length with a fairly thick center and a nicely foiled rails. Discover great paddle speed with lower rocker and an easy surfing outline."
+      "details": "The Islander is a smooth flowing mid length with a fairly thick center and a nicely foiled rails. Discover great paddle speed with lower rocker and an easy surfing outline.",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     },
     {
       "model": "Duece",
@@ -78,7 +123,12 @@
       "frontImage": "assets/images/Boards/Yinger-Duece-Front.png",
       "backImage": "assets/images/Boards/Yinger-Duece-Back.png",
       "style": "Performance",
-      "details": "A very special board in the lineup. Designed and engineered to be ridden with an upright twin and trailer setup, the Duece makes for the perfect board. The rails have a nice, full feel to them and the rocker through the body hits just right. It has the added speed and drive of a twin with the pivot abilities of a thruster, equaling out to the last board you will buy for your quiver."
+      "details": "A very special board in the lineup. Designed and engineered to be ridden with an upright twin and trailer setup, the Duece makes for the perfect board. The rails have a nice, full feel to them and the rocker through the body hits just right. It has the added speed and drive of a twin with the pivot abilities of a thruster, equaling out to the last board you will buy for your quiver.",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     },
     {
       "model": "Elixir",
@@ -86,7 +136,12 @@
       "frontImage": "assets/images/Boards/Yinger-Elixir-Front.png",
       "backImage": "assets/images/Boards/Yinger-Elixir-Back.png",
       "style": "Performance",
-      "details": "The Elixir is the perfect mix: more volume in the body but maintaining a narrow width throughout. Single concave for speed, squash tail, and a slight bump. This board has been team tested in, on, and above the lip. We can confirm its the perfect mix. Designed for team rider Kai Barton."
+      "details": "The Elixir is the perfect mix: more volume in the body but maintaining a narrow width throughout. Single concave for speed, squash tail, and a slight bump. This board has been team tested in, on, and above the lip. We can confirm its the perfect mix. Designed for team rider Kai Barton.",
+      "finConfig":"Thruster",
+      "stringer": "1",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     },
     {
       "model": "Ripper",
@@ -94,6 +149,11 @@
       "frontImage": "assets/images/Boards/Yinger-Ripper-Front.png",
       "backImage": "assets/images/Boards/Yinger-Ripper-Back.png",
       "style": "Performance",
-      "details": "Built for barrels, this board is a fine-tuned cousin of the Chronic. With a highly responsive tail, the Ripper is your ideal, all-around performance shape. Designed for team rider Blayr Barton."
+      "details": "Built for barrels, this board is a fine-tuned cousin of the Chronic. With a highly responsive tail, the Ripper is your ideal, all-around performance shape. Designed for team rider Blayr Barton.",
+      "finConfig":"Thruster",
+      "stringer": "3",
+      "tail":"Swallow",
+      "concave":"Single to Double",
+      "material": "Poly/Epoxy"
     }
 ]

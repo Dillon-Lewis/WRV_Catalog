@@ -42,7 +42,6 @@ class _IntroPageState extends State<IntroPage> {
           backgroundColor: const Color.fromARGB(255, 226, 226, 226),
         ),
       ),
-      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       drawer: Drawer(
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         child: Center(
@@ -83,109 +82,114 @@ class _IntroPageState extends State<IntroPage> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        // Wrap the whole body in a scrollable view
-        child: Column(
-          children: [
-            // Logo
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Image.asset(
-                'assets/images/Logos/blackLogo.png',
-                height: 150,
+      body: DecoratedBox(
+        decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage('assets/images/Logos/augustine-wong-background.jpg'), fit: BoxFit.fill)
+        ),
+        child: SingleChildScrollView(
+          // Wrap the whole body in a scrollable view
+          child: Column(
+            children: [
+              // Logo
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Image.asset(
+                  'assets/images/Logos/blackLogo.png',
+                  height: 150,
+                ),
               ),
-            ),
-            Text(
-              "Wave Riding Vehicles",
-              style: GoogleFonts.marcellusSc(fontSize: 35),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Shapers of the Revolution",
-                style: GoogleFonts.marcellus(fontSize: 22),
+              Text(
+                "Wave Riding Vehicles",
+                style: GoogleFonts.marcellusSc(fontSize: 35),
               ),
-            ),
-            SizedBox(height: 30),
-
-            // Boards horizontal Slider 
-            boards
-                    .isEmpty // If boards are not loaded, show a loading spinner
-                ? CircularProgressIndicator() 
-                : Container(
-                  color: const Color.fromARGB(255, 237, 237, 237),
-                  child: SizedBox(
-                    height: 375, // Set the height for the horizontal list view
-                    child: ListView.builder(
-                      itemCount:5, 
-                      scrollDirection: Axis.horizontal,
-                      itemExtent: 220,
-                      itemBuilder: (context, index) {
-                        return BoardsTile(
-                          board: boards[index],
-                        ); // Passing predefined board object to the tile
-                      },
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Shapers of the Revolution",
+                  style: GoogleFonts.marcellus(fontSize: 22),
+                ),
+              ),
+              SizedBox(height: 30),
+        
+              // Boards horizontal Slider 
+              boards
+                      .isEmpty // If boards are not loaded, show a loading spinner
+                  ? CircularProgressIndicator() 
+                  : Container(
+                    color: const Color.fromARGB(8, 0, 0, 0),
+                    child: SizedBox(
+                      height: 375, // Set the height for the horizontal list view
+                      child: ListView.builder(
+                        itemCount:5, 
+                        scrollDirection: Axis.horizontal,
+                        itemExtent: 220,
+                        itemBuilder: (context, index) {
+                          return BoardsTile(
+                            board: boards[index],
+                          ); // Passing predefined board object to the tile
+                        },
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 10,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                      Navigator.pushNamed(context, '/catalog');
-                      if (kDebugMode) {
-                        debugPrint('Moving to Catalog');
-                      }
-                    },
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      tapTargetSize:
-                          MaterialTapTargetSize.shrinkWrap, // reduces tap area
-                      backgroundColor: Colors.transparent,
-                      alignment: Alignment.topRight,
-                    ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
+                  SizedBox(height: 10,),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                        Navigator.pushNamed(context, '/catalog');
+                        if (kDebugMode) {
+                          debugPrint('Moving to Catalog');
+                        }
+                      },
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.zero,
+                        tapTargetSize:
+                            MaterialTapTargetSize.shrinkWrap, // reduces tap area
+                        backgroundColor: Colors.transparent,
+                        alignment: Alignment.topRight,
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 3),
-                        child: Text(
-                          'Full Catalog',
-                          style: GoogleFonts.marcellus(fontSize: 16,
-                          color: const Color.fromARGB(255, 135, 135, 135),
-                          decoration: TextDecoration.underline,
-                          decorationThickness: .8,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.transparent,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 3),
+                          child: Text(
+                            'Full Catalog',
+                            style: GoogleFonts.marcellus(fontSize: 16,
+                            color: const Color.fromARGB(255, 135, 135, 135),
+                            decoration: TextDecoration.underline,
+                            decorationThickness: .8,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: 20),
-            // Label below the board list
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                children: [
-                  Text(
-                    "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
-                    style: GoogleFonts.marcellus(fontSize: 20),
-                    textAlign: TextAlign.center,
-                    softWrap: true,
-                  ),
-                ],
+              SizedBox(height: 20),
+              // Label below the board list
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  children: [
+                    Text(
+                      "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
+                      style: GoogleFonts.marcellus(fontSize: 20),
+                      textAlign: TextAlign.center,
+                      softWrap: true,
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: 50),
-          ],
+              SizedBox(height: 50),
+            ],
+          ),
         ),
       ),
     );

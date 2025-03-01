@@ -69,7 +69,6 @@ class _CatalogState extends State<Catalog> {
           backgroundColor: const Color.fromARGB(255, 226, 226, 226),
         ),
       ),
-      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       drawer: Drawer(
         backgroundColor: const Color.fromARGB(255, 163, 163, 163),
         child: Center(
@@ -110,244 +109,261 @@ class _CatalogState extends State<Catalog> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            // Header
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      color: Colors.black,
-                      height: 2,
-                      margin: EdgeInsets.only(left: 50),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Center(
-                      child: Image.asset(
-                        'assets/images/Logos/blackLogo.png',
-                        height: 50,
+      body: DecoratedBox(
+        decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage('assets/images/Logos/augustine-wong-background.jpg'), fit: BoxFit.fill)
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              // Header
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.black,
+                        height: 2,
+                        margin: EdgeInsets.only(left: 50),
                       ),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      color: Colors.black,
-                      height: 2,
-                      margin: EdgeInsets.only(right: 50),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/images/Logos/blackLogo.png',
+                          height: 50,
+                        ),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 10),
-            Text(
-              "Boards Catalog",
-              style: GoogleFonts.marcellusSc(fontSize: 38),
-            ),
-
-            // PERFORMANCE BOARDS AREA
-            SizedBox(height: 20),
-
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Row(
-                children: [
-                  Text(
-                    "Performance",
-                    style: GoogleFonts.marcellusSc(fontSize: 26),
-                    textAlign: TextAlign.left,
-                  ),
-                  Expanded(
-                    child: Container(
-                      color: Colors.black,
-                      height: 1,
-                      margin: EdgeInsets.only(top: 2, left: 30, right: 30),
+                    Expanded(
+                      child: Container(
+                        color: Colors.black,
+                        height: 2,
+                        margin: EdgeInsets.only(right: 50),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 6),
-              child: Column(
-                children: [
-                  Text(
-                    "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
-                    style: GoogleFonts.marcellus(fontSize: 18),
-                    textAlign: TextAlign.left,
-                    softWrap: true,
-                  ),
-                ],
+              SizedBox(height: 10),
+              Text(
+                "Boards Catalog",
+                style: GoogleFonts.marcellusSc(fontSize: 38),
               ),
-            ),
-              performanceBoards.isEmpty
-                ? CircularProgressIndicator()
-                : SizedBox(
-                  height: 400,
-                  child: ListView.builder(
-                    itemCount: performanceBoards.length,
-                    scrollDirection: Axis.horizontal,
-                    itemExtent: 220,
-                    itemBuilder: (context, index) {
-                      return BoardsTile(board: performanceBoards[index]);
-                    },
-                  ),
-              ),
-
-          // ALTERNATIVE BOARDS AREA
-            SizedBox(height: 20),
-
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Row(
-                children: [
-                  Text(
-                    "Alternatives",
-                    style: GoogleFonts.marcellusSc(fontSize: 26),
-                    textAlign: TextAlign.left,
-                  ),
-                  Expanded(
-                    child: Container(
-                      color: Colors.black,
-                      height: 1,
-                      margin: EdgeInsets.only(top: 2, left: 30, right: 30),
+        
+              // PERFORMANCE BOARDS AREA
+              SizedBox(height: 20),
+        
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Row(
+                  children: [
+                    Text(
+                      "Performance",
+                      style: GoogleFonts.marcellusSc(fontSize: 26),
+                      textAlign: TextAlign.left,
                     ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 6),
-              child: Column(
-                children: [
-                  Text(
-                    "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
-                    style: GoogleFonts.marcellus(fontSize: 18),
-                    textAlign: TextAlign.left,
-                    softWrap: true,
-                  ),
-                ],
-              ),
-            ),
-              performanceBoards.isEmpty
-                ? CircularProgressIndicator()
-                : SizedBox(
-                  height: 400,
-                  child: ListView.builder(
-                    itemCount: alternativeBoards.length,
-                    scrollDirection: Axis.horizontal,
-                    itemExtent: 220,
-                    itemBuilder: (context, index) {
-                      return BoardsTile(board: alternativeBoards[index]);
-                    },
-                  ),
-              ),
-
-            // MID LENGTH BOARDS AREA
-            SizedBox(height: 20),
-
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Row(
-                children: [
-                  Text(
-                    "Mid-Lengths",
-                    style: GoogleFonts.marcellusSc(fontSize: 26),
-                    textAlign: TextAlign.left,
-                  ),
-                  Expanded(
-                    child: Container(
-                      color: Colors.black,
-                      height: 1,
-                      margin: EdgeInsets.only(top: 2, left: 30, right: 30),
+                    Expanded(
+                      child: Container(
+                        color: Colors.black,
+                        height: 1,
+                        margin: EdgeInsets.only(top: 2, left: 30, right: 30),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 6),
-              child: Column(
-                children: [
-                  Text(
-                    "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
-                    style: GoogleFonts.marcellus(fontSize: 18),
-                    textAlign: TextAlign.left,
-                    softWrap: true,
-                  ),
-                ],
-              ),
-            ),
-              midlengthBoards.isEmpty
-                ? CircularProgressIndicator()
-                : SizedBox(
-                  height: 400,
-                  child: ListView.builder(
-                    itemCount: midlengthBoards.length,
-                    scrollDirection: Axis.horizontal,
-                    itemExtent: 220,
-                    itemBuilder: (context, index) {
-                      return BoardsTile(board: midlengthBoards[index]);
-                    },
-                  ),
-              ),
-
-          // LONG BOARDS AREA
-            SizedBox(height: 20),
-
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Row(
-                children: [
-                  Text(
-                    "Longboards",
-                    style: GoogleFonts.marcellusSc(fontSize: 26),
-                    textAlign: TextAlign.left,
-                  ),
-                  Expanded(
-                    child: Container(
-                      color: Colors.black,
-                      height: 1,
-                      margin: EdgeInsets.only(top: 2, left: 30, right: 30),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 6),
+                child: Column(
+                  children: [
+                    Text(
+                      "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
+                      style: GoogleFonts.marcellus(fontSize: 18),
+                      textAlign: TextAlign.left,
+                      softWrap: true,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 6),
-              child: Column(
-                children: [
-                  Text(
-                    "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
-                    style: GoogleFonts.marcellus(fontSize: 18),
-                    textAlign: TextAlign.left,
-                    softWrap: true,
+                performanceBoards.isEmpty
+                  ? CircularProgressIndicator()
+                  : Container(
+                    color: const Color.fromARGB(12, 0, 0, 0),
+                    child: SizedBox(
+                      height: 400,
+                      child: ListView.builder(
+                        itemCount: performanceBoards.length,
+                        scrollDirection: Axis.horizontal,
+                        itemExtent: 220,
+                        itemBuilder: (context, index) {
+                          return BoardsTile(board: performanceBoards[index]);
+                        },
+                      ),
+                                    ),
                   ),
-                ],
+        
+            // ALTERNATIVE BOARDS AREA
+              SizedBox(height: 20),
+        
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Row(
+                  children: [
+                    Text(
+                      "Alternatives",
+                      style: GoogleFonts.marcellusSc(fontSize: 26),
+                      textAlign: TextAlign.left,
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.black,
+                        height: 1,
+                        margin: EdgeInsets.only(top: 2, left: 30, right: 30),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-              longBoards.isEmpty
-                ? CircularProgressIndicator()
-                : SizedBox(
-                  height: 400,
-                  child: ListView.builder(
-                    itemCount: longBoards.length,
-                    scrollDirection: Axis.horizontal,
-                    itemExtent: 220,
-                    itemBuilder: (context, index) {
-                      return BoardsTile(board: longBoards[index]);
-                    },
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 6),
+                child: Column(
+                  children: [
+                    Text(
+                      "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
+                      style: GoogleFonts.marcellus(fontSize: 18),
+                      textAlign: TextAlign.left,
+                      softWrap: true,
+                    ),
+                  ],
+                ),
+              ),
+                performanceBoards.isEmpty
+                  ? CircularProgressIndicator()
+                  : Container(
+                    color: const Color.fromARGB(12, 0, 0, 0),
+                    child: SizedBox(
+                      height: 400,
+                      child: ListView.builder(
+                        itemCount: alternativeBoards.length,
+                        scrollDirection: Axis.horizontal,
+                        itemExtent: 220,
+                        itemBuilder: (context, index) {
+                          return BoardsTile(board: alternativeBoards[index]);
+                        },
+                      ),
+                                    ),
                   ),
+        
+              // MID LENGTH BOARDS AREA
+              SizedBox(height: 20),
+        
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Row(
+                  children: [
+                    Text(
+                      "Mid-Lengths",
+                      style: GoogleFonts.marcellusSc(fontSize: 26),
+                      textAlign: TextAlign.left,
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.black,
+                        height: 1,
+                        margin: EdgeInsets.only(top: 2, left: 30, right: 30),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-
-              
-          ],
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 6),
+                child: Column(
+                  children: [
+                    Text(
+                      "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
+                      style: GoogleFonts.marcellus(fontSize: 18),
+                      textAlign: TextAlign.left,
+                      softWrap: true,
+                    ),
+                  ],
+                ),
+              ),
+                midlengthBoards.isEmpty
+                  ? CircularProgressIndicator()
+                  : Container(
+                    color: const Color.fromARGB(12, 0, 0, 0),
+                    child: SizedBox(
+                      height: 400,
+                      child: ListView.builder(
+                        itemCount: midlengthBoards.length,
+                        scrollDirection: Axis.horizontal,
+                        itemExtent: 220,
+                        itemBuilder: (context, index) {
+                          return BoardsTile(board: midlengthBoards[index]);
+                        },
+                      ),
+                                    ),
+                  ),
+        
+            // LONG BOARDS AREA
+              SizedBox(height: 20),
+        
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Row(
+                  children: [
+                    Text(
+                      "Longboards",
+                      style: GoogleFonts.marcellusSc(fontSize: 26),
+                      textAlign: TextAlign.left,
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.black,
+                        height: 1,
+                        margin: EdgeInsets.only(top: 2, left: 30, right: 30),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 6),
+                child: Column(
+                  children: [
+                    Text(
+                      "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
+                      style: GoogleFonts.marcellus(fontSize: 18),
+                      textAlign: TextAlign.left,
+                      softWrap: true,
+                    ),
+                  ],
+                ),
+              ),
+                longBoards.isEmpty
+                  ? CircularProgressIndicator()
+                  : Container(
+                    color: const Color.fromARGB(12, 0, 0, 0),
+                    child: SizedBox(
+                      height: 400,
+                      child: ListView.builder(
+                        itemCount: longBoards.length,
+                        scrollDirection: Axis.horizontal,
+                        itemExtent: 220,
+                        itemBuilder: (context, index) {
+                          return BoardsTile(board: longBoards[index]);
+                        },
+                      ),
+                                    ),
+                  ),
+        
+                
+            ],
+          ),
         ),
       ),
     );
