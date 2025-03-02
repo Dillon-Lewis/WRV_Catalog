@@ -391,7 +391,7 @@ class _BoardDetailState extends State<BoardDetail> {
                   ],
                 ),
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 40),
               //DIMS TABLE AREA
               Center(
                 child: Text(
@@ -399,8 +399,74 @@ class _BoardDetailState extends State<BoardDetail> {
                   style: GoogleFonts.marcellusSc(fontSize: 30),
                 ),
               ),
-              SizedBox(height: 5),
+              SizedBox(height: 10),
+              Center(
+                child: DataTable(
+                  border: TableBorder.all(color: Colors.transparent),
+                  headingRowColor: WidgetStateProperty.all(const Color.fromARGB(143, 158, 158, 158)),
+                  headingRowHeight: 30,
+                  columnSpacing: 30,
+                  columns: [
+                
+                    DataColumn(label: Center(
+                      child: Text('Length',
+                      style: GoogleFonts.marcellusSc(
+                        fontSize: 16
+                      ),
+                      ),
+                    ),
+                    ),
+                    DataColumn(label: Center(
+                      child: Text('Width',
+                      style: GoogleFonts.marcellusSc(
+                        fontSize: 16
+                      ),
+                      ),
+                    ),
+                    ),
+                    DataColumn(label: Center(
+                      child: Text('Thickness',
+                      style: GoogleFonts.marcellusSc(
+                        fontSize: 16
+                      ),
+                      ),
+                    ),
+                    ),
+                    DataColumn(label: Center(
+                      child: Text('Volume',
+                      style: GoogleFonts.marcellusSc(
+                        fontSize: 16
+                      ),
+                      ),
+                    ),
+                    ),
+                  ], rows: widget.board.dimensions.map(
+                    (dimension) => DataRow(cells: 
+                    [
+                      DataCell(Center(
+                        child: Text(dimension.length,
+                        style: TextStyle(fontSize: 14,),),
+                      )),
+                      DataCell(Center(
+                        child: Text(dimension.width,
+                        style: TextStyle(fontSize: 14),),
+                      )),
+                      DataCell(Center(
+                        child: Text(dimension.thickness, 
+                        style: TextStyle(fontSize: 14),),
+                      )),
+                      DataCell(Center(
+                        child: Text(dimension.volume,
+                        style: TextStyle(fontSize: 14),),
+                      )),
+                    ]),
+                  ).toList(),
+                  ),
+              ),
+                SizedBox(height: 40),
+
             ],
+            
           ),
         ),
       ),

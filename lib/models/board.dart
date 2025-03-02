@@ -13,6 +13,7 @@ class Board {
   final String tail;
   final String concave;
   final String material;
+  final List<Dimensions> dimensions;
 
   // Constructor
   Board({
@@ -27,10 +28,16 @@ class Board {
     required this.tail,
     required this.concave,
     required this.material,
+    required this.dimensions,
   });
 
   // Factory method to create a Board from JSON
   factory Board.fromJson(Map<String, dynamic> json) {
+    var dimensionsList = json['dimensions'] as List;
+    List<Dimensions> dimensions = dimensionsList
+        .map((dimension) => Dimensions.fromJson(dimension))
+        .toList();
+
     return Board(
       model: json['model'],
       shaper: json['shaper'],
@@ -43,6 +50,7 @@ class Board {
       tail: json['tail'],
       concave: json['concave'],
       material: json['material'],
+      dimensions: dimensions,
     );
   }
 
@@ -60,6 +68,7 @@ class Board {
       'tail': tail,
       'concave': concave,
       'material': material,
+      'dimensions': dimensions.map((dimension) => dimension.toJson()).toList(),  // Convert list of dimensions to JSON
     };
   }
 
@@ -67,6 +76,46 @@ class Board {
   @override
   String toString() {
     return 'Board(model: $model, shaper: $shaper)';
+  }
+}
+
+class Dimensions {
+  final String length;
+  final String width;
+  final String thickness;
+  final String volume;
+
+  Dimensions({
+    required this.length,
+    required this.width,
+    required this.thickness,
+    required this.volume,
+  });
+
+  // Factory method to create a Dimension from JSON
+  factory Dimensions.fromJson(Map<String, dynamic> json) {
+    return Dimensions(
+      length: json['Length'],
+      width: json['width'],
+      thickness: json['thickness'],
+      volume: json['volume'],
+    );
+  }
+
+  // Convert Dimensions object back into JSON data
+  Map<String, dynamic> toJson() {
+    return {
+      'Length': length,
+      'width': width,
+      'thickness': thickness,
+      'volume': volume,
+    };
+  }
+
+  // Override toString for debugging
+  @override
+  String toString() {
+    return 'Dimensions(length: $length, width: $width, thickness: $thickness, volume: $volume)';
   }
 }
 
