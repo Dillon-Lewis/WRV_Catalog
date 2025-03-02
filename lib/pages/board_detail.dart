@@ -23,7 +23,7 @@ class _BoardDetailState extends State<BoardDetail> {
       ),
       body: DecoratedBox(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/Logos/augustine-wong-background.jpg'),fit: BoxFit.fill)
+          image: DecorationImage(image: AssetImage('assets/images/Logos/nordwood-themes-background2.jpg'),fit: BoxFit.fill)
         ),
         child: SingleChildScrollView(
           child: Column(
