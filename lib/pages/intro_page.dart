@@ -16,6 +16,7 @@ class IntroPage extends StatefulWidget {
 class _IntroPageState extends State<IntroPage> {
   List<Board> boards = []; // This holds the list of board data
 
+
   @override
   void initState() {
     super.initState();
@@ -24,7 +25,8 @@ class _IntroPageState extends State<IntroPage> {
 
   // Method used to load the boards data from the JSON file
   Future<void> _loadBoards() async {
-    final String response = await rootBundle.loadString('assets/boards.json');
+    // Instead of rootBundle, use DefaultAssetBundle.of(context)
+    final String response = await DefaultAssetBundle.of(context).loadString('assets/boards.json');
     final List<dynamic> data = json.decode(response);
 
     // Convert JSON into a list of Board objects
@@ -55,10 +57,9 @@ class _IntroPageState extends State<IntroPage> {
                   child: Icon(Icons.surfing_sharp, size: 45),
                 ),
               ),
-
-              SizedBox(height: 40,),
+              SizedBox(height: 40),
               ListTile(
-                title: Center(child: Text("C A T A L O G",)),
+                title: Center(child: Text("C A T A L O G")),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, '/catalog');
@@ -67,7 +68,7 @@ class _IntroPageState extends State<IntroPage> {
                   }
                 },
               ),
-              SizedBox(height: 40,),
+              SizedBox(height: 40),
               ListTile(
                 title: Center(child: Text("S H A P E R S")),
                 onTap: () {
@@ -78,13 +79,14 @@ class _IntroPageState extends State<IntroPage> {
                   }
                 },
               ),
+              
             ],
           ),
         ),
       ),
       body: DecoratedBox(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/Logos/nordwood-themes-background2.jpg'), fit: BoxFit.fill)
+          image: DecorationImage(image: AssetImage('assets/images/Logos/nordwood-themes-background2.jpg'), fit: BoxFit.fill),
         ),
         child: SingleChildScrollView(
           // Wrap the whole body in a scrollable view
@@ -110,28 +112,27 @@ class _IntroPageState extends State<IntroPage> {
                 ),
               ),
               SizedBox(height: 30),
-        
-              // Boards horizontal Slider 
-              boards
-                      .isEmpty // If boards are not loaded, show a loading spinner
-                  ? CircularProgressIndicator() 
+
+              // Boards horizontal Slider
+              boards.isEmpty // If boards are not loaded, show a loading spinner
+                  ? CircularProgressIndicator()
                   : Container(
-                    color: const Color.fromARGB(8, 0, 0, 0),
-                    child: SizedBox(
-                      height: 375, // Set the height for the horizontal list view
-                      child: ListView.builder(
-                        itemCount:5, 
-                        scrollDirection: Axis.horizontal,
-                        itemExtent: 220,
-                        itemBuilder: (context, index) {
-                          return BoardsTile(
-                            board: boards[index],
-                          ); // Passing predefined board object to the tile
-                        },
+                      color: const Color.fromARGB(8, 0, 0, 0),
+                      child: SizedBox(
+                        height: 375, // Set the height for the horizontal list view
+                        child: ListView.builder(
+                          itemCount: 5,
+                          scrollDirection: Axis.horizontal,
+                          itemExtent: 220,
+                          itemBuilder: (context, index) {
+                            return BoardsTile(
+                              board: boards[index],
+                            ); // Passing predefined board object to the tile
+                          },
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(height: 10,),
+              SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
@@ -147,8 +148,7 @@ class _IntroPageState extends State<IntroPage> {
                       },
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
-                        tapTargetSize:
-                            MaterialTapTargetSize.shrinkWrap, // reduces tap area
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap, // reduces tap area
                         backgroundColor: Colors.transparent,
                         alignment: Alignment.topRight,
                       ),
@@ -160,11 +160,9 @@ class _IntroPageState extends State<IntroPage> {
                           padding: const EdgeInsets.symmetric(horizontal: 3),
                           child: Text(
                             'Full Catalog',
-                            style: GoogleFonts.marcellus(fontSize: 16,
-                            color: const Color.fromARGB(255, 135, 135, 135),
-                            decoration: TextDecoration.underline,
-                            decorationThickness: .8,
-                            ),
+                            style: GoogleFonts.marcellus(fontSize: 16, color: const Color.fromARGB(255, 135, 135, 135),
+                                decoration: TextDecoration.underline,
+                                decorationThickness: .8),
                           ),
                         ),
                       ),

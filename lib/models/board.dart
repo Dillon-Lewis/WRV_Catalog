@@ -43,7 +43,7 @@ class Board {
       shaper: json['shaper'],
       frontImage: json['frontImage'],
       backImage: json['backImage'],
-      style: json['style'],
+      style: json['style'] ?? 'NA',
       details: json['details'],
       finConfig: json['finConfig'],
       stringer: json['stringer'],
@@ -95,17 +95,17 @@ class Dimensions {
   // Factory method to create a Dimension from JSON
   factory Dimensions.fromJson(Map<String, dynamic> json) {
     return Dimensions(
-      length: json['Length'],
-      width: json['width'],
-      thickness: json['thickness'],
-      volume: json['volume'],
+      length: json['length'] ?? 'N/A',
+      width: json['width'] ?? 'N/A',
+      thickness: json['thickness'] ?? 'N/A',
+      volume: json['volume'] ?? 'N/A',
     );
   }
 
   // Convert Dimensions object back into JSON data
   Map<String, dynamic> toJson() {
     return {
-      'Length': length,
+      'length': length,
       'width': width,
       'thickness': thickness,
       'volume': volume,

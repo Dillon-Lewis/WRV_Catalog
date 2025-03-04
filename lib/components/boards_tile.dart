@@ -21,35 +21,38 @@ class BoardsTile extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
         ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                board.frontImage, 
-                height: 300,
-                            ),
-            ),
-            SizedBox(height: 8), 
-            
-            Text(
-              board.model,
-              style: GoogleFonts.marcellusSc(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 5),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset(
+                  board.frontImage, 
+                  height: 300,
+                              ),
               ),
-            ),
-            
-            // Display the shaper name (in regular style)
-            Text(
-              board.shaper,
-              style: GoogleFonts.marcellusSc(
-                fontSize: 18,
-                fontWeight: FontWeight.normal,
+              SizedBox(height: 8), 
+              
+              Text(
+                board.model,
+                style: GoogleFonts.marcellusSc(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-          ],
+              
+              // Display the shaper name (in regular style)
+              Text(
+                board.shaper,
+                style: GoogleFonts.marcellusSc(
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wrv_catalog/models/board.dart';
@@ -23,7 +24,12 @@ class _BoardDetailState extends State<BoardDetail> {
       ),
       body: DecoratedBox(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/Logos/nordwood-themes-background2.jpg'),fit: BoxFit.fill)
+          image: DecorationImage(
+            image: AssetImage(
+              'assets/images/Logos/nordwood-themes-background2.jpg',
+            ),
+            fit: BoxFit.fill,
+          ),
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -403,70 +409,125 @@ class _BoardDetailState extends State<BoardDetail> {
               Center(
                 child: DataTable(
                   border: TableBorder.all(color: Colors.transparent),
-                  headingRowColor: WidgetStateProperty.all(const Color.fromARGB(143, 158, 158, 158)),
+                  headingRowColor: WidgetStateProperty.all(
+                    const Color.fromARGB(143, 158, 158, 158),
+                  ),
                   headingRowHeight: 30,
                   columnSpacing: 30,
                   columns: [
-                
-                    DataColumn(label: Center(
-                      child: Text('Length',
-                      style: GoogleFonts.marcellusSc(
-                        fontSize: 16
-                      ),
-                      ),
-                    ),
-                    ),
-                    DataColumn(label: Center(
-                      child: Text('Width',
-                      style: GoogleFonts.marcellusSc(
-                        fontSize: 16
-                      ),
+                    DataColumn(
+                      label: Center(
+                        child: Text(
+                          'Length',
+                          style: GoogleFonts.marcellusSc(fontSize: 16),
+                        ),
                       ),
                     ),
-                    ),
-                    DataColumn(label: Center(
-                      child: Text('Thickness',
-                      style: GoogleFonts.marcellusSc(
-                        fontSize: 16
-                      ),
-                      ),
-                    ),
-                    ),
-                    DataColumn(label: Center(
-                      child: Text('Volume',
-                      style: GoogleFonts.marcellusSc(
-                        fontSize: 16
-                      ),
+                    DataColumn(
+                      label: Center(
+                        child: Text(
+                          'Width',
+                          style: GoogleFonts.marcellusSc(fontSize: 16),
+                        ),
                       ),
                     ),
+                    DataColumn(
+                      label: Center(
+                        child: Text(
+                          'Thickness',
+                          style: GoogleFonts.marcellusSc(fontSize: 16),
+                        ),
+                      ),
                     ),
-                  ], rows: widget.board.dimensions.map(
-                    (dimension) => DataRow(cells: 
-                    [
-                      DataCell(Center(
-                        child: Text(dimension.length,
-                        style: TextStyle(fontSize: 14,),),
-                      )),
-                      DataCell(Center(
-                        child: Text(dimension.width,
-                        style: TextStyle(fontSize: 14),),
-                      )),
-                      DataCell(Center(
-                        child: Text(dimension.thickness, 
-                        style: TextStyle(fontSize: 14),),
-                      )),
-                      DataCell(Center(
-                        child: Text(dimension.volume,
-                        style: TextStyle(fontSize: 14),),
-                      )),
-                    ]),
-                  ).toList(),
-                  ),
+                    DataColumn(
+                      label: Center(
+                        child: Text(
+                          'Volume',
+                          style: GoogleFonts.marcellusSc(fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ],
+                  rows:
+                      widget.board.dimensions
+                          .map(
+                            (dimension) => DataRow(
+                              cells: [
+                                DataCell(
+                                  Center(
+                                    child: Text(
+                                      dimension.length,
+                                      style: TextStyle(fontSize: 14),
+                                    ),
+                                  ),
+                                ),
+                                DataCell(
+                                  Center(
+                                    child: Text(
+                                      dimension.width,
+                                      style: TextStyle(fontSize: 14),
+                                    ),
+                                  ),
+                                ),
+                                DataCell(
+                                  Center(
+                                    child: Text(
+                                      dimension.thickness,
+                                      style: TextStyle(fontSize: 14),
+                                    ),
+                                  ),
+                                ),
+                                DataCell(
+                                  Center(
+                                    child: Text(
+                                      dimension.volume,
+                                      style: TextStyle(fontSize: 14),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                          .toList(),
+                ),
               ),
-                SizedBox(height: 40),
-
+              SizedBox(height: 20),
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/catalog');
+                  if (kDebugMode) {
+                    debugPrint('Moving to Catalog');
+                  }
+                },
+                style: TextButton.styleFrom(
+                  padding: EdgeInsets.zero,
+                  tapTargetSize:
+                      MaterialTapTargetSize.shrinkWrap, // reduces tap area
+                  backgroundColor: Colors.transparent,
+                  alignment: Alignment.center,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(color: Colors.transparent),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 3),
+                    child: Text(
+                      'Back to Catalog',
+                      style: GoogleFonts.marcellus(
+                        fontSize: 16,
+                        color: const Color.fromARGB(255, 135, 135, 135),
+                        decoration: TextDecoration.underline,
+                        decorationThickness: .8,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Image.asset('assets/images/Logos/blackLogo.png',
+              height: 30,),
+              SizedBox(height: 5,)
             ],
-            
           ),
         ),
       ),

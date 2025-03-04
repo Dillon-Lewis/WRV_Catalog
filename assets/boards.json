@@ -13,55 +13,55 @@
     "material": "Poly/Epoxy",
     "dimensions": [
       {
-        "Length": "5'4\"",
+        "length": "5'4\"",
         "width": "19\"",
         "thickness": "2.34\"",
         "volume": "25.3L"
       },
       {
-        "Length": "5'5\"",
+        "length": "5'5\"",
         "width": "19.25\"",
         "thickness": "2.4\"",
         "volume": "36.6"
       },
       {
-        "Length": "5'6\"",
+        "length": "5'6\"",
         "width": "19.5\"",
         "thickness": "2.45\"",
         "volume": "27.8L"
       },
       {
-        "Length": "5'7\"",
+        "length": "5'7\"",
         "width": "19.75\"",
         "thickness": "2.5\"",
         "volume": "29L"
       },
       {
-        "Length": "5'8\"",
+        "length": "5'8\"",
         "width": "20\"",
         "thickness": "2.55\"",
         "volume": "30.7L"
       },
       {
-        "Length": "5'9\"",
+        "length": "5'9\"",
         "width": "20.25\"",
         "thickness": "2.6\"",
         "volume": "32L"
       },
       {
-        "Length": "5'10\"",
+        "length": "5'10\"",
         "width": "20.5\"",
         "thickness": "2.66\"",
         "volume": "33.5L"
       },
       {
-        "Length": "5'11\"",
+        "length": "5'11\"",
         "width": "20.5\"",
         "thickness": "2.68\"",
         "volume": "34.2L"
       },
       {
-        "Length": "6'0\"",
+        "length": "6'0\"",
         "width": "20.75\"",
         "thickness": "2.68\"",
         "volume": "35.5L"
@@ -82,31 +82,31 @@
     "material": "Poly",
     "dimensions": [
       {
-        "Length": "5'4\"",
+        "length": "5'4\"",
         "width": "19.75\"",
         "thickness": "2.25\"",
         "volume": "N/A"
       },
       {
-        "Length": "5'6\"",
+        "length": "5'6\"",
         "width": "20\"",
         "thickness": "2.375\"",
         "volume": "N/A"
       },
       {
-        "Length": "5'8\"",
+        "length": "5'8\"",
         "width": "20.5\"",
         "thickness": "2.375\"",
         "volume": "N/A"
       },
       {
-        "Length": "5'10\"",
+        "length": "5'10\"",
         "width": "20.68\"",
         "thickness": "2.5\"",
         "volume": "N/A"
       },
       {
-        "Length": "6'0\"",
+        "length": "6'0\"",
         "width": "20.68\"",
         "thickness": "2.5\"",
         "volume": "N/A"
@@ -325,7 +325,7 @@
     "shaper": "Macoto",
     "frontImage": "assets/images/Boards/MA-Mid-Front.png",
     "backImage": "assets/images/Boards/MA-Mid-Back.png",
-    "style": "Mid-Length",
+    "style": "Mid-length",
     "details": "The MA Mid is a standard mid length made for cruising comfortably on waves all shapes and sizes. With a large beak nose and wide round tail, you can ride it freely and leisurely with a single fin, or add a little performance with a 2 + 1.",
     "finConfig": "Single w/ sidebites",
     "stringer": "1",
@@ -472,7 +472,7 @@
     "shaper": "Leo Ravina",
     "frontImage": "assets/images/Boards/Ravina-Islander-Front.png",
     "backImage": "assets/images/Boards/Ravina-Islander-Back.png",
-    "style": "Mid-Length",
+    "style": "Mid-length",
     "details": "The Islander is a smooth flowing mid length with a fairly thick center and a nicely foiled rails. Discover great paddle speed with lower rocker and an easy surfing outline.",
     "finConfig": "Single w/ sidebites",
     "stringer": "1",
