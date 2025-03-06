@@ -10,6 +10,15 @@ class MeetTheShapers extends StatefulWidget {
 }
 
 class _MeetTheShapersState extends State<MeetTheShapers> {
+  // List<Shaper> shapers = [];
+
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _loadShapers();
+  // }
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +33,8 @@ class _MeetTheShapersState extends State<MeetTheShapers> {
         child: Center(
           child: Column(
             children: [
-              DrawerHeader(child: GestureDetector(
+              DrawerHeader(
+                child: GestureDetector(
                   onTap: () {
                     Navigator.pop(context);
                     Navigator.pushNamed(context, '/intropage');
@@ -54,56 +64,60 @@ class _MeetTheShapersState extends State<MeetTheShapers> {
                   }
                 },
               ),
-              
             ],
           ),
         ),
       ),
       body: DecoratedBox(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/Logos/nordwood-themes-background2.jpg'), fit: BoxFit.fill),
+          image: DecorationImage(
+            image: AssetImage(
+              'assets/images/Logos/nordwood-themes-background2.jpg',
+            ),
+            fit: BoxFit.fill,
+          ),
         ),
         child: SingleChildScrollView(
-          // Wrap the whole body in a scrollable view
           child: Column(
             children: [
-              // Logo
+              // Header
               Padding(
                 padding: const EdgeInsets.only(top: 20),
-                child: Image.asset(
-                  'assets/images/Logos/blackLogo.png',
-                  height: 150,
-                ),
-              ),
-              Text(
-                "Wave Riding Vehicles",
-                style: GoogleFonts.marcellusSc(fontSize: 35),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Shapers of the Revolution",
-                  style: GoogleFonts.marcellus(fontSize: 22),
-                ),
-              ),
-              SizedBox(height: 30),
-
-              SizedBox(height: 20),
-              // Label below the board list
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
+                child: Row(
                   children: [
-                    Text(
-                      "At WRV, the love of surfing and board building is at the heart and soul of what we do.",
-                      style: GoogleFonts.marcellus(fontSize: 20),
-                      textAlign: TextAlign.center,
-                      softWrap: true,
+                    Expanded(
+                      child: Container(
+                        color: Colors.black,
+                        height: 2,
+                        margin: EdgeInsets.only(left: 50),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/images/Logos/blackLogo.png',
+                          height: 50,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.black,
+                        height: 2,
+                        margin: EdgeInsets.only(right: 50),
+                      ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 10),
+              Text(
+                "Meet the Shapers",
+                style: GoogleFonts.marcellusSc(fontSize: 38),
+              ),
+              SizedBox(height: 10),
+              
             ],
           ),
         ),

@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wrv_catalog/components/boards_tile.dart';
 import 'package:wrv_catalog/models/board.dart';
 import 'dart:convert';
-import 'package:flutter/services.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -186,6 +185,7 @@ class _IntroPageState extends State<IntroPage> {
                 ),
               ),
               SizedBox(height: 50),
+              
             ],
           ),
         ),

@@ -1,0 +1,38 @@
+[
+    {
+        "firstName": "Bob",
+        "lastName": "Yinger",
+        "shortBio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "models": [
+            "Vapor", "Duece", "Elixir", "Ripper", "Skipjack"
+        ],
+        "headshot": "assets/images/Logos/sqaureLogo.png"
+    },
+    {
+        "firstName": "Leo",
+        "lastName": "Ravina",
+        "shortBio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "models": [
+            "Islander", "Wahoo", "Shuffleboard", "The '63"
+        ],
+        "headshot": "assets/images/Logos/sqaureLogo.png"
+    },
+    {
+        "firstName": "Marty",
+        "lastName": "Keesecker",
+        "shortBio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "models": [
+            "Mini Long"
+        ],
+        "headshot": "assets/images/Logos/sqaureLogo.png"
+    },
+    {
+        "firstName": "Macoto",
+        "lastName": "Kurihara",
+        "shortBio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "models": [
+            "MA Fish", "MA Mid"
+        ],
+        "headshot": "assets/images/Logos/sqaureLogo.png"
+    }
+]
